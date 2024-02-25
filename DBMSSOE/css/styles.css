@@ -1,0 +1,232 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.main-header {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 70px;
+  margin-left: 30px;
+  border-radius: 50%;
+}
+
+.college-name {
+  font-size: 35px;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+  margin-left: -5.75%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #121212;
+  overflow-x: hidden;
+  background-image: url(../assets/bgimg3.jpg);
+  background-size: 100rem;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+h1 {
+  color: white;
+
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.flex-container {
+  width: 100vw;
+
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 31.25rem;
+  height: 25rem;
+  padding-top: 3%;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 31.25;
+  height: 25rem;
+
+  margin-top: 5px;
+  padding-top: 30px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #1f1f1f;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
+}
+select {
+  background-color: #363636;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.subtitle {
+  font-size: 0.8rem;
+  color: red;
+}
+
+input {
+  border: none;
+  border-bottom: solid rgb(143, 143, 143) 1px;
+
+  margin-bottom: 30px;
+
+  background: none;
+  color: rgba(255, 255, 255, 0.555);
+
+  height: 35px;
+  width: 300px;
+}
+
+.submit-btn {
+  cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+
+  box-shadow: 2px 2px 7px #38d39f70;
+
+  background: #38d39f;
+  color: rgba(255, 255, 255, 0.8);
+
+  width: 80px;
+
+  transition: all 1s;
+}
+
+.submit-btn:hover {
+  color: rgb(255, 255, 255);
+
+  box-shadow: none;
+}
+/*profile cards in the home page*/
+.cards {
+  padding-top: 10%;
+  padding-left: 30%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.card-container {
+  background: #1f1f1f;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  color: #b3b8cd;
+  padding-top: 50px;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  max-width: 100%;
+  text-align: center;
+  margin-right: 10%;
+}
+.round {
+  height: 127px;
+  width: 128px;
+}
+
+.card-container .round {
+  border-radius: 50%;
+}
+
+button.primary {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}
+/*student page cards*/
+.student-card {
+  padding-top: 8%;
+  padding-left: 25%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.student-card-container {
+  background: #1f1f1f;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  color: #b3b8cd;
+  padding-top: 50px;
+  padding-left: 5%;
+  position: relative;
+  width: 50rem;
+  height: 25rem;
+  max-width: 100%;
+  margin-right: 10%;
+}
+.student-card-container h3 {
+  text-align: center;
+  padding-bottom: 7%;
+}
+
+.student-card-container h4 {
+  text-align: left;
+}
+/* .give-certificates {
+} */
+
+.view-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

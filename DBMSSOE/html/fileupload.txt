@@ -1,0 +1,44 @@
+    <?php
+    // Include the database configuration file
+    include_once 'db_connection.php';
+
+    // Get the uploaded file information
+    $file = $_FILES['file'];
+
+    $fileName = $_FILES['file']['name'];
+    $fileTmpName = $_FILES['file']['tmp_name'];
+    $fileSize = $_FILES['file']['size'];
+    $fileError = $_FILES['file']['error'];
+    $fileType = $_FILES['file']['type'];
+
+    // File extension
+    $fileExt = explode('.', $fileName);
+    $fileActualExt = strtolower(end($fileExt));
+
+    // Only allow certain file formats
+    $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+
+    if (in_array($fileActualExt, $allowed)) {
+        if ($fileError === 0) {
+            if ($fileSize < 1000000) {
+                $fileNameNew = uniqid('', true) . '.' . $fileActualExt;
+                $fileDestination = 'uploads/' . $fileNameNew;
+                move_uploaded_file($fileTmpName, $fileDestination);
+
+                // Insert file into database
+                $sql = "INSERT INTO files (file_name, file_type, file_size) VALUES (?, ?, ?)";
+                $stmt = $db->prepare($sql);
+                $stmt->bind_param("ssi", $fileNameNew, $fileType, $fileSize);
+                $stmt->execute();
+
+                echo "File uploaded successfully.";
+            } else {
+                echo "Your file is too big!";
+            }
+        } else {
+            echo "There was an error uploading your file!";
+        }
+    } else {
+        echo "You cannot upload files of this type!";
+    }
+?>
